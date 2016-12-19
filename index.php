@@ -20,7 +20,7 @@ class Member
 
 $member = new Member;
 $data = $member->memberList();
-
+print_r($data);
 ?>
 
 

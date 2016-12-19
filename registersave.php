@@ -37,7 +37,7 @@ class Registersave
  $save->name = $_POST['name'];
  $save->email = $_POST['email'];
  if($save->saveData()){
-	// header( 'Location: http://www.yoursite.com/new_page.html' ) ;
+	echo "<script type='text/javascript'>window.top.location='index.php';</script>";
  }
 
 ?>

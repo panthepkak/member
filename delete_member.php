@@ -1,54 +1,34 @@
 <?php
+
 include('connection.php');
 
-class deleteMember
+class delete
 {
-  public $id;
-	public $name;
-	public $email;
 
-	public function deleteData(){
-
-		if(isset($this->name) && isset($this->email)){
-			$connection = new Connection;
-			$con = $connection->connectDataBase();
-
-			$sql = "DELETE member(id,name,email)
-					 VALUES('$this->id','$this->name', '$this->email')";
-
-			$result = mysqli_query($con, $sql) or die ("Error in query: $sql " . mysqli_error());
-
-			if($result){
-				return true;
-			}else{
-				return false;
-			}
-		  $connection->closeDataBase();
-		}else{
-			return false;
-		}
-
-	}
-
+  public function memberDelete(){
+    $connection = new Connection;
+    $connect = $connection->connectDataBase();
+    $sql = "DELETE * FROM member";
+    $result = mysqli_query($connect,$sql);
+    $row_cnt = mysqli_num_rows($result);
+    if($row_cnt > 0){
+      $data = $connection->fetchData($result);
+    }
+    return $data;
+  }
 
 }
 
- $delete = new deleteMember;
- $delete->id = $_POST['id'];
- $delete->name = $_POST['name'];
- $delete->email = $_POST['email'];
- if($delete->deleteData()){
-
- }
-
-// delete member
-if($_POST['name']){
-  $delete_member = new deleteMember;
-  $delete_member->name = $_POST['name'];
-  $delete_member->email = $_POST['email'];
-  $delete_member->id = $_POST['id'];
-  if($delete_member->deleteMember()){
-		echo "de";
-	}
-}
+$member = new delete;
+$data = $member->memberDelete();
+$id = $_POST['id'];
+$name = $_POST['name'];
+$email = $_POST['email'];
+echo $id;
+echo $name;
+echo $email;
+//$r = mysql_query("DELETE FROM feed WHERE date = '$date' AND time = '$time'") or die("Query failed! with '$feed'");
+$r = mysql_query ("DELETE FROM member WHERE member = '" . mysql_real_escape_string ($) . "'") or die ("Query failed with {$member} and mysql error: " . mysql_error); )
+mysql_query("DELETE FROM member WHERE member = 'hello'")
+or die("Query failed! with '$member'");
 ?>

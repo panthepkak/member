@@ -43,6 +43,7 @@ $data = $member->memberList();
               <table class="table table-bordered">
                 <thead>
                   <tr>
+                    <th>No.</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Manage</th>
@@ -52,11 +53,12 @@ $data = $member->memberList();
                   <?php
                   foreach ($data as $val) {
                     echo "<tr>
+                      <td>{$val['id']}</td>
                       <td>{$val['name']}</td>
                       <td>{$val['email']}</td>
                       <td>
                         <a href='edit_member.php?id={$val['id']}' class='btn btn-primary btn-xs'>Edit</a>
-                        <a href='delete_member.php?id={$_POST['id']} type='button' class='btn btn-danger btn-xs'>Delete</a>
+                        <a href='delete_member.php?id={$val['id']} type='button' class='btn btn-danger btn-xs'>Delete</a>
                       </td>
                     </tr>";
                   }
@@ -69,9 +71,6 @@ $data = $member->memberList();
     </div>
     </div>
   </div>
-
-
-
 
 </body>
 </html>

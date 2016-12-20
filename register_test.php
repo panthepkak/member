@@ -8,7 +8,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-5 col-md-offset-3">
-        <div class="panel panel-default">
+        <div class="panel panel-warning">
           <div class="panel-heading">กรอกข้อมูล</div>
           <div class="panel-body">
 
@@ -23,8 +23,9 @@
             </div>
 
               </label>
-            </div>
-            <button type="submit" class="btn btn-default"> <a href="index.php"></a>ตกลง</button>
+
+            <button type="submit" class="btn btn-primary"> <a href="index.php"></a>ตกลง</button>
+</div>
           </form>
           </div>
         </div>

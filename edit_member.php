@@ -66,7 +66,7 @@ if($_POST['name']){
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-5 col-md-offset-3">
-        <div class="panel panel-default">
+        <div class="panel panel-primary">
           <div class="panel-heading">ข้อมูลส่วนตัว</div>
           <div class="panel-body">
 
@@ -82,9 +82,9 @@ if($_POST['name']){
             </div>
 
               </label>
-            </div>
-            <button type="submit" class="btn btn-default"> <a href="index.php"></a>ตกลง</button>
-          </form>
+
+            <button type="submit" class="btn btn-primary"> <a href="index.php"></a>ตกลง</button>
+          </div></form>
           </div>
         </div>
 

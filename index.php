@@ -58,7 +58,7 @@ $data = $member->memberList();
                       <td>{$val['email']}</td>
                       <td>
                         <a href='edit_member.php?id={$val['id']}' class='btn btn-primary btn-xs'>Edit</a>
-                        <a href='delete_member.php?id={$val['id']} type='button' class='btn btn-danger btn-xs'>Delete</a>
+                        <a href='delete_member.php?id={$val['id']}' type='button' class='btn btn-danger btn-xs' onclick=\"return confirm('Are you sure you want to delete this item?');\">Delete</a>
                       </td>
                     </tr>";
                   }

@@ -15,7 +15,7 @@
             <form id="formRegister" name="formRegister" method="post" action="registersave.php">
             <div class="form-group">
               <label for="name">ชื่อ-นามสกุล</label>
-              <input type="name" class="form-control" id="name" name="name" placeholder="=ชื่อ-นามสกุล">
+              <input type="name" class="form-control" id="name" name="name" placeholder="ชื่อ-นามสกุล">
             </div>
             <div class="form-group">
               <label for="email">E-mail</label>

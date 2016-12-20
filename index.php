@@ -56,7 +56,7 @@ $data = $member->memberList();
                       <td>{$val['email']}</td>
                       <td>
                         <a href='edit_member.php?id={$val['id']}' class='btn btn-primary btn-xs'>Edit</a>
-                        <a type='button' class='btn btn-danger btn-xs'>Delete</a>
+                        <a href='delete_member.php?id={$_POST['id']} type='button' class='btn btn-danger btn-xs'>Delete</a>
                       </td>
                     </tr>";
                   }

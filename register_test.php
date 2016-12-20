@@ -9,17 +9,17 @@
     <div class="row">
       <div class="col-md-5 col-md-offset-3">
         <div class="panel panel-default">
-          <div class="panel-heading">Panel heading without title</div>
+          <div class="panel-heading">กรอกข้อมูล</div>
           <div class="panel-body">
 
             <form id="formRegister" name="formRegister" method="post" action="registersave.php">
             <div class="form-group">
-              <label for="name">name</label>
-              <input type="name" class="form-control" id="name" name="name" placeholder="name">
+              <label for="name">ชื่อ-นามสกุล</label>
+              <input type="name" class="form-control" id="name" name="name" placeholder="=ชื่อ-นามสกุล">
             </div>
             <div class="form-group">
-              <label for="email">email</label>
-              <input type="email" class="form-control" id="email" name="email" placeholder="email">
+              <label for="email">E-mail</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="อีเมลล์">
             </div>
 
               </label>

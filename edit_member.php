@@ -67,18 +67,18 @@ if($_POST['name']){
     <div class="row">
       <div class="col-md-5 col-md-offset-3">
         <div class="panel panel-default">
-          <div class="panel-heading">Panel heading without title</div>
+          <div class="panel-heading">ข้อมูลส่วนตัว</div>
           <div class="panel-body">
 
             <form id="formRegister" name="formRegister" method="post" action="edit_member.php">
               <input type="hidden"  name="id" value="<?=$data['id']?>">
             <div class="form-group">
-              <label for="name">name</label>
-              <input type="name" class="form-control" id="name" name="name" value="<?=$data['name']?>" placeholder="name">
+              <label for="name">ชื่อ-นามสกุล</label>
+              <input type="name" class="form-control" id="name" name="name" value="<?=$data['name']?>" placeholder="ชื่อ-นามสกุล">
             </div>
             <div class="form-group">
-              <label for="email">email</label>
-              <input type="email" class="form-control" id="email" name="email" value="<?=$data['email']?>" placeholder="email">
+              <label for="email">E-mail</label>
+              <input type="email" class="form-control" id="email" name="email" value="<?=$data['email']?>" placeholder="อีเมลล์">
             </div>
 
               </label>

@@ -36,7 +36,7 @@ $data = $member->memberList();
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Test</a>
+      <a class="navbar-brand" href="#">Online</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -65,22 +65,10 @@ $data = $member->memberList();
       </form>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Profile</a></li>
-        <li> class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Dropdown
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator"class="divider"></li>
-            <li><a href="#">Separated link</a></li>
+<button type="button" class="btn btn-info btn-lg">
+  <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Setting
+</button>
+
           </ul>
         </li>
       </ul>
@@ -88,18 +76,13 @@ $data = $member->memberList();
   </div><!-- /.container-fluid -->
 </nav>
 
-<ul class="nav nav-pills nav-stacked">
-  <li role="presentation" class="active"><a href="#">Home</a></li>
-  <li role="presentation"><a href="#">Profile</a></li>
-  <li role="presentation"><a href="#">Messages</a></li>
-</ul>
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-5 col-md-offset-2">
+      <div class="col-md-5 col-md-offset-4">
         <div class="panel panel-info">
           <div class="panel-heading">ข้อมูลสมาชิก</div>
           <div class="panel-body">

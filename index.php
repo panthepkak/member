@@ -75,6 +75,9 @@ $data = $member->memberList();
 <button type="button" class="btn btn-info btn-lg">
   <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Setting
 </button>
+<button type="button" class="btn btn-info" aria-label="Left Align">
+  <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>PROFILE
+</button>
 
           </ul>
         </li>

@@ -76,9 +76,18 @@ $data = $member->memberList();
   </div><!-- /.container-fluid -->
 </nav>
 
+
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+
+  <ul class="list-group">
+  <li class="list-group-item list-group-item-success">Dapibus ac facilisis in</li>
+  <li class="list-group-item list-group-item-info">Cras sit amet nibh libero</li>
+  <li class="list-group-item list-group-item-warning">Porta ac consectetur ac</li>
+  <li class="list-group-item list-group-item-danger">Vestibulum at eros</li>
+</ul>
+
 
   <div class="container-fluid">
     <div class="row">

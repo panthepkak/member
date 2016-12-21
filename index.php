@@ -26,8 +26,15 @@ $data = $member->memberList();
 
 <html>
 <head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+
   <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -73,25 +80,22 @@ $data = $member->memberList();
         </li>
       </ul>
     </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
 </nav>
-
-
-  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-
-  <ul class="list-group">
-  <li class="list-group-item list-group-item-success">Dapibus ac facilisis in</li>
-  <li class="list-group-item list-group-item-info">Cras sit amet nibh libero</li>
-  <li class="list-group-item list-group-item-warning">Porta ac consectetur ac</li>
-  <li class="list-group-item list-group-item-danger">Vestibulum at eros</li>
-</ul>
 
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-5 col-md-offset-4">
+
+      <div class="col-md-3">
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-success">Dapibus ac facilisis in</li>
+          <li class="list-group-item list-group-item-info">Cras sit amet nibh libero</li>
+          <li class="list-group-item list-group-item-warning">Porta ac consectetur ac</li>
+          <li class="list-group-item list-group-item-danger">Vestibulum at eros</li>
+        </ul>
+      </div>
+
+      <div class="col-md-9">
         <div class="panel panel-info">
           <div class="panel-heading">ข้อมูลสมาชิก</div>
           <div class="panel-body">
@@ -103,7 +107,10 @@ $data = $member->memberList();
                 <thead>
                   <tr>
                     <th>No.</th>
-                    <th>Name</th>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Nickname</th>
+                    <th>Age</th>
                     <th>Email</th>
                     <th>Manage</th>
                   </tr>
@@ -113,7 +120,10 @@ $data = $member->memberList();
                   foreach ($data as $val) {
                     echo "<tr>
                       <td>{$val['id']}</td>
-                      <td>{$val['name']}</td>
+                      <td>{$val['firstname']}</td>
+                      <td>{$val['lastname']}</td>
+                      <td>{$val['nickname']}</td>
+                      <td>{$val['age']}</td>
                       <td>{$val['email']}</td>
                       <td>
                         <a href='edit_member.php?id={$val['id']}' class='btn btn-primary btn-xs'>Edit</a>

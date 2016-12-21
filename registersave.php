@@ -1,20 +1,24 @@
 <?php
+
 include('connection.php');
 
 class Registersave
 {
-
-	public $name;
+  public $username;
+	public $password;
+	public $firstname;
+	public $lastname;
+	public $nickname;
+	public $age;
 	public $email;
 
 	public function saveData(){
 
-		if(isset($this->name) && isset($this->email)){
 			$connection = new Connection;
 			$con = $connection->connectDataBase();
 
-			$sql = "INSERT INTO member(name, email)
-					 VALUES('$this->name', '$this->email')";
+			$sql = "INSERT INTO member(username,password,firstname,lastname,nickname,age,email)
+					 VALUES('$this->username','$this->password','$this->firstname','$this->lastname','$this->nickname','$this->age', '$this->email')";
 
 			$result = mysqli_query($con, $sql) or die ("Error in query: $sql " . mysqli_error());
 
@@ -23,18 +27,23 @@ class Registersave
 			}else{
 				return false;
 			}
+
 		  $connection->closeDataBase();
-		}else{
-			return false;
-		}
 
 	}
 
 
 }
 
+	print_r($_POST);
+
  $save = new Registersave;
- $save->name = $_POST['name'];
+ $save->username = $_POST['username'];
+ $save->password = $_POST['password'];
+ $save->firstname = $_POST['firstname'];
+ $save->lastname = $_POST['lastname'];
+ $save->nickname = $_POST['nickname'];
+ $save->age = $_POST['age'];
  $save->email = $_POST['email'];
  if($save->saveData()){
 	echo "<script type='text/javascript'>window.top.location='index.php';</script>";
